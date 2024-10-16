@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  /* Reset margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure body takes full viewport height */
+html, body {
+  min-height: 100%;
+  overflow-x: hidden;  /* Prevent horizontal overflow */
+  font-family: 'Inter', sans-serif; /* Add a default font if necessary */
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure images and iframes are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+.dropdown-menu {
+  position: absolute; /* Or relative/fixed if needed */
+  z-index: 9999;
+}
+.parent-container {
+  overflow: visible;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Adjust depending on where you want the dropdown to appear */
+  left: 0;
+}
