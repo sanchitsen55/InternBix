@@ -4,7 +4,7 @@ import { Linkedin, Twitter, Facebook, Instagram } from 'lucide-react'; // Social
 import Logo from './Logo'; // Assuming you have a Logo component
 import { Link } from 'react-router-dom';
 
-// SocialIcon Component with Props Validation ....
+// SocialIcon Component with Props Validation ...
 const SocialIcon = ({ href, Icon }) => (
   <a href={href} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400">
     <Icon className="w-6 h-6" />
