@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Save, Briefcase, MapPin, DollarSign, Clock, Calendar } from 'lucide-react';
+import PropTypes from 'prop-types'; // Import prop-types
+import { Save, Briefcase, MapPin, Clock, Calendar } from 'lucide-react'; // Remove DollarSign as it's unused
 import { postJob } from '../api'; // Import postJob from api.js
 
 const InputField = ({ label, id, type = "text", placeholder, value, onChange, icon: Icon }) => (
@@ -21,6 +22,17 @@ const InputField = ({ label, id, type = "text", placeholder, value, onChange, ic
   </div>
 );
 
+// Add propTypes validation for InputField component
+InputField.propTypes = {
+  label: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  placeholder: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  icon: PropTypes.elementType.isRequired,
+};
+
 const TextAreaField = ({ label, id, placeholder, value, onChange }) => (
   <div className="mb-4">
     <label htmlFor={id} className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
@@ -34,6 +46,15 @@ const TextAreaField = ({ label, id, placeholder, value, onChange }) => (
     ></textarea>
   </div>
 );
+
+// Add propTypes validation for TextAreaField component
+TextAreaField.propTypes = {
+  label: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
 
 export default function EmployerJobPosting() {
   const [jobData, setJobData] = useState({
@@ -78,8 +99,9 @@ export default function EmployerJobPosting() {
       // Call the API to post the job
       await postJob(formattedData);
       setSuccess('Job posted successfully!');
-    } catch (err) {
+    } catch (error) {  // Use "error" to match the state naming convention
       setError('Failed to post the job. Please try again.');
+      console.error(error);  // Log the error to see the actual issue in the console
     } finally {
       setLoading(false);
     }

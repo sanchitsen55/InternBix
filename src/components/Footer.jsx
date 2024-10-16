@@ -74,8 +74,8 @@ const Footer = () => {
               <SocialIcon href="https://www.instagram.com/internbix1/" Icon={Instagram} />
             </div>
 
-            <div className="bt">
-              <button className=' mt-2 mb-2 px-2 py-2 bg-zinc-400 rounded-lg'>Subscribe</button>
+            <div className="btn mt-4">
+              <button className='  px-2 py-2 bg-zinc-400 rounded-lg'>Subscribe</button>
             </div>
           </div>
         </div>
