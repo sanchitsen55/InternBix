@@ -28,8 +28,9 @@ const AboutUs = () => {
 
       <h2 className="text-3xl font-semibold text-gray-800 mt-8 mb-4">Join Us</h2>
       <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-        Whether you're a student looking for an internship or a company searching for fresh talent, Internbix is your go-to platform. Together, we can shape the future of tomorrow's workforce.
-      </p>
+  Whether you&apos;re a student looking for an internship or a company searching for fresh talent, Internbix is your go-to platform.
+</p>
+
 
       <div className="text-center mt-8">
         <a

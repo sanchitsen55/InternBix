@@ -19,7 +19,7 @@ const NavLinkItem = ({ href, children }) => (
 export default function Navbar() {
   const blogDropdownItems = [
     { label: 'Interview Q/A', href: '/about/our-story' },
-    { label: 'Blogs', href: '/about/team' },
+    { label: 'Blogs', href: '/Blogs' },
     { label: 'Experience', href: '/about/careers' },
   ];
 

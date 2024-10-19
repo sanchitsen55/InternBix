@@ -6,6 +6,7 @@ import Home from './components/Home';
 import EmployerJobPosting from './components/EmployerJobPosting';
 import Login from './components/Login';
 import Register from './components/Register';
+import Blogs from './components/Blogs'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/blogs" element= {<Blogs/>}/>
       </Routes>
 
       {/* Footer component */}
